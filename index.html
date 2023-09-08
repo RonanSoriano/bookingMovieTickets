@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <style>
+      
+      @font-face {
+  			font-family: importFont;
+  			src: url(sansation_light.woff);
+			}
+      
         body {
-            font-family: Comic Sans MS;
+            font-family: Impact;
             margin: 0;
             padding: 0;
           	background-color: #1f2833;
@@ -44,6 +50,8 @@
    				 height:auto;
            overflow: hidden;
       }
+
+/* SLIDER ANIMATION */
   		
       .slider{
            overflow: hidden;
@@ -61,6 +69,7 @@
       .slider figure img{
       	width: 20%;
         float: left;
+         filter: brightness(0.5);
       }
       
       @keyframes slider {
@@ -82,14 +91,23 @@
         70% {
         	left: -200%;
         }
-        75% {
+        80% {
         	left: -300%;
         }
-        95% {
+        80% {
         	left: -300%;
         }
       }
       
+      /*END OF SLIDER ANIMATION*/
+			/* Top left text */
+      .top-left {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+        color: white;
+        font-size: xx-large;
+      }
       .footer {
            	background-color: #0b0c10;
            	text-align: center;
@@ -104,7 +122,8 @@
             position: fixed;
             color: #fff;
           	width: 100%;
-            padding: 10px;
+            padding: 20px;
+        padding-bottom: 2%;
         }
       
       .flexbox-center {
@@ -167,6 +186,27 @@
   flex-grow: 1;
 }
       
+       .circle-container-slider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 20px; /* Adjust the left position as needed */
+            bottom: 20px;
+            z-index: 2; /* Ensure the circles are above the slider */
+        }
+
+        .circle-slider {
+            width: 25px; /* Adjust the circle size as needed */
+            height: 25px; /* Same as width for a perfect circle */
+            background-color: #585858; /* Red color, you can change this */
+            border-radius: 50%; /* Make it a circle */
+            margin: 5px 0; /* Adjust the vertical spacing between circles */
+        }
+
+      
     </style>
 </head>
 <body>
@@ -188,17 +228,27 @@
 
   <div class= "slider">
     <figure>  
-          <img src="https://m.media-amazon.com/images/M/MV5BMTYxMTk0ODQ4OV5BMl5BanBnXkFtZTgwNjM1Nzk5NjE@._V1_.jpg" alt="Felix Manalo"/>
-          <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/8ee32f73d8bcedd0bd5bcc96d87d73f8.png" alt="Zom 100"/>
-          <img src="https://wallpapers.com/images/hd/mitsuhas-shooting-star-kimi-no-na-wa-jkajcqs5cqovp9ay.jpg" alt="Your Name"/>
+          <img src="https://media.discordapp.net/attachments/612980490856693785/1141912540532703334/image.png" alt="Felix Manalo" height="1080" width = "1920"/>
+          <img src="https://media.discordapp.net/attachments/612980490856693785/1141912509008334878/image.png" alt="Zom 100" height="1080" width = "1920"/>
+          <img src="https://media.discordapp.net/attachments/612980490856693785/1141912612406312990/image.png" alt="Your Name" height="1080" width = "1920"/>
+
     </figure>
+    
+        <div class="circle-container-slider">
+        <div class="circle-slider"></div>
+        <div class="circle-slider"></div>
+        <div class="circle-slider"></div>
+        <div class="circle-slider"></div>
+        <div class="circle-slider"></div>
+    </div>
+    
   </div>
-
-
+  
+<div class="top-left"><b>Now Showing</b></div>
+  
 <footer class="footer">
     &copy; 2023 Cine District. All rights reserved.
 </footer>
 
 </body>
 </html>
-
