@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Comic Sans MS;
+            margin: 0;
+            padding: 0;
+          	background-color: #1f2833;
+        }
+
+        header {
+            background-color: #0b0c10;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          	text-align: center;
+            overflow: hidden;
+          	width: 100%;
+            position: fixed;
+       
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+      }
+
+        .header-logo img {
+          	width: 35px;
+            height: 50px;
+            margin-right: 10px;           	
+        }
+      
+
+      }
+      
+      .container {
+      	   width:auto;
+   				 height:auto;
+           overflow: hidden;
+      }
+  		
+      .slider{
+           overflow: hidden;
+      }
+      
+      .slider figure{
+      	padding-top: 70px;
+				position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 20s slider infinite;
+      }
+      
+      .slider figure img{
+      	width: 20%;
+        float: left;
+      }
+      
+      @keyframes slider {
+        0% {
+        	left: 0;
+        }
+        0% {
+        	left: 0;
+        }
+        25% {
+        	left: -100%;
+        }
+        45% {
+        	left: -100%;
+        }
+        50% {
+        	left: -200%;
+        }
+        70% {
+        	left: -200%;
+        }
+        75% {
+        	left: -300%;
+        }
+        95% {
+        	left: -300%;
+        }
+      }
+      
+      .footer {
+           	background-color: #0b0c10;
+           	text-align: center;
+          	margin: 0 auto;
+         		margin-left: auto;
+          	margin-right: auto;
+            display: table;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            bottom: 0;
+            position: fixed;
+            color: #fff;
+          	width: 100%;
+            padding: 10px;
+        }
+      
+      .flexbox-center {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	height: 35px;  
+  	background-color: #000000 
+        padding: 0;
+        gap: 100px;
+            position: fixed;
+}
+      
+      
+      .logo {
+  margin-right: auto;
+}
+      
+      .flexbox-center-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+            position: fixed;
+}
+
+      .flexbox-center-inner input {
+  margin: 0 10px;
+}
+.flexbox-container {
+  display: flex;
+  align-items: center;
+  height: 50px; 
+  background-color: #000000;  
+       position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+      
+      .center-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+      
+      .flex-spacer {
+  flex-grow: 1;
+}
+      .flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; 
+}
+
+.spacer {
+  flex-grow: 1;
+}
+      
+    </style>
+</head>
+<body>
+
+   <header class="flexbox-container">
+    <div class="logo">
+      <img src="https://media.discordapp.net/attachments/1101696919056678932/1149729304545071205/logo_wh.png" alt="Logo" height="50" width="75">
+    </div>
+    <div class="center-container">
+      <div class="flex-spacer"></div> 
+      <div class="flexbox-center">
+        <input type="image" name="Home" src="https://media.discordapp.net/attachments/1101696919056678932/1149736789318324325/Home.png" height="25" width="75" alt="Home">
+        <input type="image" name="About" src="https://media.discordapp.net/attachments/1101696919056678932/1149744276834627735/About.png" height="25" width="75" alt="About">
+        <input type="image" name="Contact" src="https://media.discordapp.net/attachments/1101696919056678932/1149744405264216075/Contact.png" height="25" width="75" alt="Contact">
+      </div>
+      <div class="flex-spacer"></div>  
+    </div>
+  </header>
+
+  <div class= "slider">
+    <figure>  
+          <img src="https://m.media-amazon.com/images/M/MV5BMTYxMTk0ODQ4OV5BMl5BanBnXkFtZTgwNjM1Nzk5NjE@._V1_.jpg" alt="Felix Manalo"/>
+          <img src="https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/8ee32f73d8bcedd0bd5bcc96d87d73f8.png" alt="Zom 100"/>
+          <img src="https://wallpapers.com/images/hd/mitsuhas-shooting-star-kimi-no-na-wa-jkajcqs5cqovp9ay.jpg" alt="Your Name"/>
+    </figure>
+  </div>
+
+
+<footer class="footer">
+    &copy; 2023 Cine District. All rights reserved.
+</footer>
+
+</body>
+</html>
 
